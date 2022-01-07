@@ -20,7 +20,7 @@ BuildRequires : buildreq-distutils3
 Provides: retype
 Provides: retype-python
 Provides: retype-python3
-BuildRequires : pluggy
+BuildRequires : pypi(pluggy)
 BuildRequires : py-python
 BuildRequires : pypi(click)
 BuildRequires : pypi(pathspec)
@@ -31,7 +31,7 @@ BuildRequires : pypi(wheel)
 BuildRequires : pytest
 BuildRequires : tox
 BuildRequires : typed_ast
-BuildRequires : virtualenv
+BuildRequires : pypi(virtualenv)
 
 %description
 # retype
