@@ -4,7 +4,7 @@
 #
 Name     : pypi-retype
 Version  : 21.12.0
-Release  : 43
+Release  : 44
 URL      : https://files.pythonhosted.org/packages/01/c5/f4c3e9bc4fc21be32bc83b2db99eb439fc60e657ee130ca807358cb2dd26/retype-21.12.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/01/c5/f4c3e9bc4fc21be32bc83b2db99eb439fc60e657ee130ca807358cb2dd26/retype-21.12.0.tar.gz
 Summary  : re-apply types from .pyi stub files to your codebase
@@ -14,24 +14,20 @@ Requires: pypi-retype-bin = %{version}-%{release}
 Requires: pypi-retype-license = %{version}-%{release}
 Requires: pypi-retype-python = %{version}-%{release}
 Requires: pypi-retype-python3 = %{version}-%{release}
-Requires: pathspec
-Requires: typed_ast
+Requires: pypi(pathspec)
+Requires: pypi(typed_ast)
 BuildRequires : buildreq-distutils3
-Provides: retype
-Provides: retype-python
-Provides: retype-python3
-BuildRequires : pypi(pluggy)
-BuildRequires : py-python
 BuildRequires : pypi(click)
 BuildRequires : pypi(pathspec)
+BuildRequires : pypi(pluggy)
+BuildRequires : pypi(py)
+BuildRequires : pypi(pytest)
 BuildRequires : pypi(setuptools)
 BuildRequires : pypi(setuptools_scm)
+BuildRequires : pypi(tox)
 BuildRequires : pypi(typed_ast)
-BuildRequires : pypi(wheel)
-BuildRequires : pytest
-BuildRequires : tox
-BuildRequires : typed_ast
 BuildRequires : pypi(virtualenv)
+BuildRequires : pypi(wheel)
 
 %description
 # retype
@@ -92,7 +88,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1641490431
+export SOURCE_DATE_EPOCH=1641654746
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
